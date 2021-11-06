@@ -11,11 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.p-n2 {
-  padding: -0.2rem;
+.bg-services-cards {
+  /* background-color: #0097c2; */
+  background-color: #42b2eb;
 }
 
-.mt-n4 {
-  margin-top: -0.8rem;
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+/* Padding and Margin */
+.p-n2 {padding: -0.2rem;}
+
+.mt-n4 {margin-top: -0.8rem;}
+
+/* Spacing */
+.vh-10{height: 10vh;}
+.vh-20{height: 20vh;}
+.vh-30{height: 30vh;}
+.vh-40{height: 40vh;}
+.vh-50{height: 50vh;}
+.vh-60{height: 60vh;}
+.vh-70{height: 70vh;}
+.vh-80{height: 80vh;}
+.vh-90{height: 90vh;}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+ .vh-xs-60{height: 60vh;}
+ .vh-xs-70{height: 70vh;}
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+
 }
