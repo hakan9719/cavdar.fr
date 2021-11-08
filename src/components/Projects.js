@@ -22,7 +22,7 @@ export default function Projects() {
             "title": "KanBell",
             "web": "https://retoucherie-prestige.fr/",
             "img": prestige,
-            "status": 1
+            "status": 0
         }
     ]
     return (
@@ -38,7 +38,7 @@ export default function Projects() {
                                 </Card.Body>
                                 <img className="rounded-bottom" variant="top" src={data.img} alt="prestige"/>
                                 <div className="d-flex justify-content-center mt-1">
-                                    <a className="btn btn-dark fs-5 fw-bold" href={data.web}>Voir</a>
+                                    <a className="btn btn-dark fs-5 fw-bold" href={data.web} target="_blank" rel="noreferrer">Voir</a>
                                 </div>
                             </Card>
                         </Col>

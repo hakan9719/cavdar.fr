@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { Col, Container, Form, Row } from 'react-bootstrap'
 
 export default function Contact() {
-    const [status, setStatus] = useState("Submit");
+    const [status, setStatus] = useState("Envoyer");
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setStatus("Sending...");
+        setStatus("En cours...");
         //Get elements of the target
         const {name,email,message} = e.target.elements;
         let details = {
@@ -21,8 +21,9 @@ export default function Contact() {
             },
             body: JSON.stringify(details)
         });
-        setStatus("Submit");
+        setStatus("Envoyer");
         let result = await responses.json();
+        // Message d'alert
         alert(result.status);
     }
     return (
@@ -31,16 +32,13 @@ export default function Contact() {
             <form onSubmit={handleSubmit}>
                 <Row xs={1} md={3} lg={12} className="mb-3 w-75 mx-auto">
                     <Form.Group as={Col} controlId="name">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" placeholder="Name" />
+                        <Form.Control type="text" placeholder="Nom" />
                     </Form.Group>
                     <Form.Group as={Col} controlId="email">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Control type="email" placeholder="Email" />
                     </Form.Group>
                     <Form.Group as={Col} controlId="message">
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control type="textarea" placeholder="Your Message" />
+                        <Form.Control type="textarea" placeholder="Votre Message" />
                     </Form.Group>
                 </Row>
                 <button className="btn btn-primary" type="submit">{status}</button>
