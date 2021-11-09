@@ -14,7 +14,7 @@ export default function Contact() {
             message: message.value
         }
         //Set the response of the mail
-        let responses = await fetch('http://' + window.location.hostname + ':3002/send', {
+        let responses = await fetch('https://' + window.location.hostname + ':3002/send', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
