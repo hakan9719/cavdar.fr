@@ -2,7 +2,7 @@ import React from 'react'
 // import anime from 'animejs';
 import { Col, Row } from 'react-bootstrap'
 // import imageCode from '../img/code.jpg'
-import profile from '../img/profile.jpeg';
+// import profile from '../img/profile.jpeg';
 import github from '../img/github.svg';
 import instagram from '../img/instagram.svg';
 import linkedin from '../img/linkedin.svg';
@@ -26,7 +26,7 @@ export default function LandPage() {
                 {/* <button className="animation w-25" onClick={animationComponent}>Enter</button> */}
                 <Row xs={1} md={2} lg={2} className="g-3 m-auto w-75 align-items-center">
                     <Col className="mt-1">
-                        <img src={profile} alt="profile" className="rounded-circle" width="170" height="170"/>
+                        {/* <img src={profile} alt="profile" className="rounded-circle" width="170" height="170"/> */}
                         <h3>Hakan CAVDAR</h3> <br />
                         <h4 className="fw-bold">Développeur Junior FullStack</h4>
                     </Col>
