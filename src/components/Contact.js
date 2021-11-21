@@ -1,29 +1,42 @@
 // import React from "react";
 // import { Col, Container, Form, Row } from "react-bootstrap";
 // require('dotenv').config();
-const dotenv = require('dotenv');
+import emailjs from 'emailjs-com'
+import { Col, Container, Form, Row } from 'react-bootstrap'
+
 export default function Contact() {
-  // using Twilio SendGrid's v3 Node.js Library
-  // https://github.com/sendgrid/sendgrid-nodejs
-  const sgMail = require("@sendgrid/mail");
-  console.log(process.env);
-  console.log(dotenv);
-  console.log(dotenv.config());
-  sgMail.setApiKey('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');
-  const msg = {
-    to: "contact@cavdar.fr", // Change to your recipient
-    from: "contact@cavdar.fr", // Change to your verified sender
-    subject: "Sending with SendGrid is Fun",
-    text: "and easy to do anywhere, even with Node.js",
-    html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-  };
-  sgMail
-    .send(msg)
-    .then(() => {
-      console.log("Email sent");
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-    return ('');
+  const sendEmail = e => {
+    e.preventDefault()
+
+    emailjs
+    .sendForm('service_1i9yx0p', 'template_nir2ft9', e.target, 'user_UHLGjojXt7petJWpMBtuM')
+    .then(
+      result => {
+        console.log(result.text)
+      },
+      error => {
+        console.log(error.text)
+      }
+      )
+    }
+
+    return (
+      <Container className="text-center my-5" id="contact">
+            <h1>Contact</h1>
+            <form onSubmit={sendEmail}>
+                <Row xs={1} md={3} lg={12} className="mb-3 w-75 mx-auto">
+                    <Form.Group as={Col} controlId="name">
+                        <Form.Control type="text" placeholder="Nom" />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="email">
+                        <Form.Control type="email" placeholder="Email" />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="message">
+                        <Form.Control type="textarea" placeholder="Votre Message" />
+                    </Form.Group>
+                </Row>
+                <button className="btn btn-primary" type="submit">Envoyer</button>
+            </form>
+        </Container>
+    );
 }
