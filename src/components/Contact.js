@@ -26,13 +26,13 @@ export default function Contact() {
             <form onSubmit={sendEmail}>
                 <Row xs={1} md={3} lg={12} className="mb-3 w-75 mx-auto">
                     <Form.Group as={Col} controlId="name">
-                        <Form.Control type="text" placeholder="Nom" />
+                        <Form.Control type="text" name="name" placeholder="Nom" />
                     </Form.Group>
                     <Form.Group as={Col} controlId="email">
-                        <Form.Control type="email" placeholder="Email" />
+                        <Form.Control type="email" name="email" placeholder="Email" />
                     </Form.Group>
                     <Form.Group as={Col} controlId="message">
-                        <Form.Control type="textarea" placeholder="Votre Message" />
+                        <Form.Control type="textarea" name="message" placeholder="Votre Message" />
                     </Form.Group>
                 </Row>
                 <button className="btn btn-primary" type="submit">Envoyer</button>
