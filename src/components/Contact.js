@@ -1,10 +1,11 @@
 import emailjs from 'emailjs-com'
 import { Col, Container, Form, Row } from 'react-bootstrap'
+import { init } from 'emailjs-com';
 
 export default function Contact() {
   
-  console.log(process.env.REACT_APP_USER_ID);
   const sendEmail = e => {
+    init(process.env.REACT_APP_USER_ID);
     e.preventDefault()
     emailjs.sendForm(process.env.REACT_APP_SERVICE, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
     .then(
