@@ -1,10 +1,11 @@
-import Contact from "./components/Contact";
+
 import Footer from "./components/Footer";
 // import Header from "./components/Header";
 import LandPage from "./components/LandPage";
 import Projects from "./components/Projects";
 // import Services from "./components/Services";
 import Skills from "./components/Skills";
+import Formulaire from "./components/Formulaire";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       {/* <Services/> */}
       <Skills/>
       <Projects/>
-      <Contact/>
+      <Formulaire/>
       <Footer/>
     </div>
   );
