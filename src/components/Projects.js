@@ -12,10 +12,10 @@ export default function Projects() {
         },
         {
             "id": 2,
-            "title": "CarsWash94",
-            "web": "https://retoucherie-prestige.fr/",
+            "title": "CavdarShop",
+            "web": "https://cavdar.shop/",
             "img": prestige,
-            "status": 0
+            "status": 1
         },
         {
             "id": 3,

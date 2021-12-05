@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: cavdar.fr
+Token: 9e71fe5dbf733ef678435cc60ce1aec6d69f7a366d2e268f992032a2c991aaaf
