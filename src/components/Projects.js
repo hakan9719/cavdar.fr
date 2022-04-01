@@ -1,6 +1,7 @@
 import React from 'react'
 import {Card, Col, Container, Row } from 'react-bootstrap'
 import prestige from '../img/prestige.png'
+import linkedin from '../img/clone-linkedin.png'
 export default function Projects() {
     const data =[
         {
@@ -15,7 +16,7 @@ export default function Projects() {
             "title": "CavdarShop",
             "web": "https://cavdar.shop/",
             "img": prestige,
-            "status": 1
+            "status": 0
         },
         {
             "id": 3,
@@ -23,6 +24,13 @@ export default function Projects() {
             "web": "https://retoucherie-prestige.fr/",
             "img": prestige,
             "status": 0
+        },
+        {
+            "id": 4,
+            "title": "Clone Linkedin",
+            "web": "https://next-js-auth-mongodb.vercel.app/",
+            "img": linkedin,
+            "status": 1
         }
     ]
     return (
